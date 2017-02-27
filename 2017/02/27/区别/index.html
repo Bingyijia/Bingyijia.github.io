@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="bingyijia, fontEnd" />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -80,23 +80,32 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon2.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="bingyijia&apos;s blog">
+<meta name="description" content="关于 nth-child(n)与nth-of-type(n) 的区别
+此篇的由来nth-child(n)与nth-of-type(n)好像在平时使用中并没有太大的区别，至少我之前是这么想的，直到有一次……
+用法与区别其实这两个选择器的日常的使用也不是很频繁，但是有的时候的确很好用。不如正题：仔细看下定义就知道两者的区别了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="区别">
+<meta property="og:title" content="关于 nth-child(n)与nth-of-type(n) 的区别">
 <meta property="og:url" content="http://yoursite.com/2017/02/27/区别/index.html">
 <meta property="og:site_name" content="BingYiJia's Blog">
-<meta property="og:description" content="bingyijia&apos;s blog">
-<meta property="og:updated_time" content="2017-02-27T03:27:06.000Z">
+<meta property="og:description" content="关于 nth-child(n)与nth-of-type(n) 的区别
+此篇的由来nth-child(n)与nth-of-type(n)好像在平时使用中并没有太大的区别，至少我之前是这么想的，直到有一次……
+用法与区别其实这两个选择器的日常的使用也不是很频繁，但是有的时候的确很好用。不如正题：仔细看下定义就知道两者的区别了">
+<meta property="og:image" content="http://p1.bpimg.com/567571/9025b161b7eb9aab.gif">
+<meta property="og:image" content="http://p1.bpimg.com/567571/cc58766da4cfe3ae.gif">
+<meta property="og:updated_time" content="2017-02-27T13:52:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="区别">
-<meta name="twitter:description" content="bingyijia&apos;s blog">
+<meta name="twitter:title" content="关于 nth-child(n)与nth-of-type(n) 的区别">
+<meta name="twitter:description" content="关于 nth-child(n)与nth-of-type(n) 的区别
+此篇的由来nth-child(n)与nth-of-type(n)好像在平时使用中并没有太大的区别，至少我之前是这么想的，直到有一次……
+用法与区别其实这两个选择器的日常的使用也不是很频繁，但是有的时候的确很好用。不如正题：仔细看下定义就知道两者的区别了">
+<meta name="twitter:image" content="http://p1.bpimg.com/567571/9025b161b7eb9aab.gif">
 
 
 
@@ -130,7 +139,7 @@
 
 
 
-  <title> 区别 | BingYiJia's Blog </title>
+  <title> 关于 nth-child(n)与nth-of-type(n) 的区别 | BingYiJia's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +321,7 @@
             
             
               
-                区别
+                关于 nth-child(n)与nth-of-type(n) 的区别
               
             
           </h2>
@@ -337,6 +346,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -363,7 +394,34 @@
       
 
       
-        
+        <h3 id="关于-nth-child-n-与nth-of-type-n-的区别"><a href="#关于-nth-child-n-与nth-of-type-n-的区别" class="headerlink" title="关于 nth-child(n)与nth-of-type(n) 的区别"></a>关于 nth-child(n)与nth-of-type(n) 的区别</h3><hr>
+<h4 id="此篇的由来"><a href="#此篇的由来" class="headerlink" title="此篇的由来"></a>此篇的由来</h4><p>nth-child(n)与nth-of-type(n)好像在平时使用中并没有太大的区别，至少我之前是这么想的，直到有一次……</p>
+<h4 id="用法与区别"><a href="#用法与区别" class="headerlink" title="用法与区别"></a>用法与区别</h4><p>其实这两个选择器的日常的使用也不是很频繁，但是有的时候的确很好用。<br>不如正题：<br>仔细看下定义就知道两者的区别了<br><a id="more"></a></p>
+<ul>
+<li><p>nth-child(n)</p>
+<blockquote>
+<p>:nth-child(<em>n</em>) 选择器匹配属于其父元素的第 N 个子元素，<strong>不论元素的类型</strong></p>
+</blockquote>
+</li>
+<li><p>nth-of-type(n)</p>
+<blockquote>
+<p>:nth-of-type(<em>n</em>) 选择器匹配属于父元素的<strong>特定类型</strong>的第 N 个子元素的每个元素</p>
+</blockquote>
+</li>
+</ul>
+<p>其实看到这个地方大致就差多了理解了，一个是分类筛选子集，另一个则不是</p>
+<p>下面通过具体得例子说明两者的区别</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- html结构 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是第一个div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是第二个div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是第三个div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span>&gt;</span>这是第一个h5<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span>&gt;</span>这是第二个h5<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h5</span>&gt;</span>这是第三个h5<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是第一个p<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是第二个p<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是第三个p<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="1-均不采用限制元素"><a href="#1-均不采用限制元素" class="headerlink" title="1.均不采用限制元素"></a>1.均不采用限制元素</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 均不采用限定元素 */</span></div><div class="line"><span class="comment">/* 设置红色背景 */</span></div><div class="line"><span class="selector-class">.demo</span> <span class="selector-pseudo">:nth-child(3)</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/* 设置绿色背景 */</span></div><div class="line"><span class="selector-class">.demo</span> <span class="selector-pseudo">:nth-of-type(2)</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#0ff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>具体页面效果如下图<br><img src="http://p1.bpimg.com/567571/9025b161b7eb9aab.gif" alt=""></p>
+<p>注意两者的前面都没有加限制元素，所以两个表达的意思分别是：<br>.demo :nth-child(3)：选择demo类的第3个子元素<br>.demo :nth-of-type(2)：选择demo类中<strong>每个元素类型</strong>的第二个元素，所以第二个div，第二个h5，第二个p都会被选中</p>
+<h5 id="2-采用限制元素"><a href="#2-采用限制元素" class="headerlink" title="2.采用限制元素"></a>2.采用限制元素</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 均不采用限定元素 */</span></div><div class="line"><span class="comment">/* 设置红色背景 */</span></div><div class="line"><span class="selector-class">.demo</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/* 设置绿色背景 */</span></div><div class="line"><span class="selector-class">.demo</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#0ff</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>具体页面效果如下图<br><img src="http://p1.bpimg.com/567571/cc58766da4cfe3ae.gif" alt=""></p>
+<p>现在的情况就有意思了，来看下具体的原因：<br>.demo p:nth-child(3)：选择demo类的p元素且其是第3个子元素，很显然不存在这样的元素，所以选择失败，自然也就没有元素节点的背景色被设置成红色<br>.demo p:nth-of-type(2)：选择demo类中的第2个p元素</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>ele:nth-child(n)选择器简单的理解就是：<br>是指定的ele类型同时还是第n个子元素，满足这两个条件就可以选择到，否则就无法选择</p>
+<p>ele:nth-of-type(n)选择器简单的理解就是：<br>选择父元素的第n个指定元素ele类型的子元素</p>
+<p>原创文章，转载请标明出处。</p>
+
       
     </div>
 
@@ -383,6 +441,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
       
 
       
@@ -448,8 +512,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -473,7 +546,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -482,7 +555,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -527,6 +600,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于-nth-child-n-与nth-of-type-n-的区别"><span class="nav-number">1.</span> <span class="nav-text">关于 nth-child(n)与nth-of-type(n) 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#此篇的由来"><span class="nav-number">1.1.</span> <span class="nav-text">此篇的由来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用法与区别"><span class="nav-number">1.2.</span> <span class="nav-text">用法与区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-均不采用限制元素"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.均不采用限制元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-采用限制元素"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.采用限制元素</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
