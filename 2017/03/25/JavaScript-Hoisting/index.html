@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="bingyijia, fontEnd" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,19 +87,22 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="前言：JS中在声明函数与变量的时候是存在变量提升的问题，一不注意，有的时候会导致一些bug，本文主要就是针对JS中的提升问题。JS中的提升，分为变量提升与函数提升，并且函数提升是优先于变量提升的。当然此文讨论的内容不包括ES6。
+提升的概念其实针对这个概念，私以为可以简单的理解为JS解析器将函数的声明与变量的声明提升到所在作用域的顶部，以方便使用。注意，只是将声明提前，赋值并没有提前。
+实例说明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/02/25/hello-world/index.html">
+<meta property="og:title" content="JavaScript Hoisting">
+<meta property="og:url" content="http://yoursite.com/2017/03/25/JavaScript-Hoisting/index.html">
 <meta property="og:site_name" content="BingYiJia's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-25T14:16:36.000Z">
+<meta property="og:description" content="前言：JS中在声明函数与变量的时候是存在变量提升的问题，一不注意，有的时候会导致一些bug，本文主要就是针对JS中的提升问题。JS中的提升，分为变量提升与函数提升，并且函数提升是优先于变量提升的。当然此文讨论的内容不包括ES6。
+提升的概念其实针对这个概念，私以为可以简单的理解为JS解析器将函数的声明与变量的声明提升到所在作用域的顶部，以方便使用。注意，只是将声明提前，赋值并没有提前。
+实例说明">
+<meta property="og:updated_time" content="2017-03-25T14:37:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="JavaScript Hoisting">
+<meta name="twitter:description" content="前言：JS中在声明函数与变量的时候是存在变量提升的问题，一不注意，有的时候会导致一些bug，本文主要就是针对JS中的提升问题。JS中的提升，分为变量提升与函数提升，并且函数提升是优先于变量提升的。当然此文讨论的内容不包括ES6。
+提升的概念其实针对这个概念，私以为可以简单的理解为JS解析器将函数的声明与变量的声明提升到所在作用域的顶部，以方便使用。注意，只是将声明提前，赋值并没有提前。
+实例说明">
 
 
 
@@ -127,13 +130,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/25/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/25/JavaScript-Hoisting/"/>
 
 
 
 
 
-  <title> Hello World | BingYiJia's Blog </title>
+  <title> JavaScript Hoisting | BingYiJia's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +297,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/25/JavaScript-Hoisting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BingYiJia">
@@ -315,7 +318,7 @@ Quick">
             
             
               
-                Hello World
+                JavaScript Hoisting
               
             
           </h2>
@@ -330,8 +333,8 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T22:16:36+08:00">
-                2017-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T22:36:26+08:00">
+                2017-03-25
               </time>
             
 
@@ -340,6 +343,28 @@ Quick">
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -366,15 +391,24 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>JS中在声明函数与变量的时候是存在变量提升的问题，一不注意，有的时候会导致一些bug，本文主要就是针对JS中的提升问题。JS中的提升，分为变量提升与函数提升，并且函数提升是优先于变量提升的。当然此文讨论的内容不包括ES6。</p>
+<h5 id="提升的概念"><a href="#提升的概念" class="headerlink" title="提升的概念"></a>提升的概念</h5><p>其实针对这个概念，私以为可以简单的理解为JS解析器将函数的声明与变量的声明<strong>提升到所在作用域的顶部</strong>，以方便使用。注意，只是将声明提前，赋值并没有提前。</p>
+<h5 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h5><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// function b() &#123;alert(98);&#125;</span></div><div class="line">b(); <span class="comment">// 98</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="number">98</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">97</span>;</div></pre></td></tr></table></figure>
+<p>上面的例子其实就相当于是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="number">98</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a;</div><div class="line">b(); <span class="comment">// 98</span></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// function b() &#123;alert(98);&#125;</span></div><div class="line">a = <span class="number">97</span>;</div></pre></td></tr></table></figure>
+<h5 id="块中的提升"><a href="#块中的提升" class="headerlink" title="块中的提升"></a>块中的提升</h5><p>在JS的块中声明函数的时候，出现的了比较有趣的现象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(c); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// undefined</span></div><div class="line"></div><div class="line"><span class="comment">// b() //不注释掉会报错</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">97</span>;</div><div class="line">  b(); <span class="comment">// 98</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">98</span>);</div><div class="line">  &#125;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="keyword">var</span> c = <span class="number">99</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">d</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">100</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a, b, c, d);</div><div class="line"><span class="comment">// a = 97</span></div><div class="line"><span class="comment">// b = function b() &#123;console.log(98)&#125;</span></div><div class="line"><span class="comment">// c = undefined</span></div><div class="line"><span class="comment">// d = undefined</span></div></pre></td></tr></table></figure>
+<p>现在这个情况就有点意思了：</p>
+<p>因为JS是不存在块级作用域的，所以变量 a 和 c 打印出来 undefined 是很好理解的，但是 b 和 d 是什么情况呢？<br>为什么也是 undefined 呢？这到底是提升了还是没提升呢？</p>
+<p>经过查阅资料，我认为这块是浏览器的一种容错机制的结果（未针对所有浏览器的不同版本进行测试，如果有错误，希望留言斧正，谢谢）。因为严格来说，在块中声明函数属于无效语法，JS引擎会尝试修正错误，将其转化为合理的状态（这点在《JavaScript高级程序设计 第三版》176页也是一笔带过）。</p>
+<p>我认为，浏览器尝试修正的时候是将函数申明转化为函数表达式，并放在块的最顶部。所以函数的变量名进行了提升，而函数体其实只是一种折中的提升</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 上边代码相当于是这样</span></div><div class="line"><span class="keyword">var</span> a;</div><div class="line"><span class="keyword">var</span> b;</div><div class="line"><span class="keyword">var</span> c;</div><div class="line"><span class="keyword">var</span> d;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  b = <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">98</span>);</div><div class="line">  &#125;;</div><div class="line">  a = <span class="number">97</span>;</div><div class="line">  b(); <span class="comment">// 98</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  d = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">100</span>);</div><div class="line">  &#125;</div><div class="line">  c = <span class="number">99</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 受限于水平，如有错误，欢迎留言斧正，谢谢</span></div></pre></td></tr></table></figure>
+<p>针对这种情况，强烈不建议在块中出现函数声明，建议改为函数表达式。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>只要记住这个关键的点，其他的类似这样题目都会迎刃而解，当然搞懂这个不是为了做题，而是<strong>为了避免一些工作中的bug</strong>，所以推荐以后在写代码的时候，最好按照如下的格式去书写</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 声明各种变量</span></div><div class="line">  <span class="comment">// 声明函数</span></div><div class="line">  <span class="comment">// 其他语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h5><p><a href="http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html" target="_blank" rel="external">JavaScript Scoping and Hoisting</a><br><a href="http://statichtml.com/2011/spidermonkey-function-hoisting.html" target="_blank" rel="external">Firefox doesn’t hoist function declarations in blocks</a></p>
+<p>原创文章，版权所有，转载请注明出处。</p>
 
       
     </div>
@@ -396,6 +430,12 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
 
       
         
@@ -405,15 +445,15 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/08/mac-os下的Apache配置-macOS-Sierra-10-12/" rel="next" title="mac os下的Apache配置 macOS Sierra 10.12">
+                <i class="fa fa-chevron-left"></i> mac os下的Apache配置 macOS Sierra 10.12
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/26/test2/" rel="prev" title="test2">
-                test2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -558,7 +598,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#提升的概念"><span class="nav-number">2.</span> <span class="nav-text">提升的概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实例说明"><span class="nav-number">3.</span> <span class="nav-text">实例说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#块中的提升"><span class="nav-number">4.</span> <span class="nav-text">块中的提升</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考链接："><span class="nav-number">6.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
             
 
           </div>
